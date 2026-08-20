@@ -1,0 +1,33 @@
+project:
+  name: a-share-mean-reversion-stability
+  random_seed: 42
+
+paths:
+  raw_data: data/raw
+  intermediate_data: data/intermediate
+  processed_data: data/processed
+  tables: outputs/tables
+  figures: outputs/figures
+  diagnostics: outputs/diagnostics
+
+data:
+  market: china_a_share
+  frequency: daily
+  price_field: adjusted_close
+  calendar: SSE
+  start_date: null
+  end_date: null
+
+validation:
+  scheme: chronological
+  train_start: null
+  train_end: null
+  test_start: null
+  test_end: null
+
+reproducibility:
+  persist_intermediate_data: true
+  record_environment: true
+
+# Pair selection, trading signals, portfolio construction, and backtesting are
+# intentionally out of scope for the initial project scaffold.

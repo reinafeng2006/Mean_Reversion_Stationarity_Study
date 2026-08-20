@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Environments and local configuration
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data: never commit raw market data or generated datasets
+data/raw/**
+data/intermediate/**
+data/processed/**
+!data/raw/.gitkeep
+!data/intermediate/.gitkeep
+!data/processed/.gitkeep
+
+# Generated research artifacts
+outputs/tables/**
+outputs/figures/**
+outputs/diagnostics/**
+!outputs/tables/.gitkeep
+!outputs/figures/.gitkeep
+!outputs/diagnostics/.gitkeep
+
+# Common large data formats anywhere in the repository
+*.parquet
+*.feather
+*.arrow
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.db
+*.sqlite
+*.sqlite3

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "a-share-mean-reversion-stability"
+version = "0.1.0"
+description = "Out-of-sample stability research for mean-reverting China A-share stock relationships"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "jupyterlab>=4.2,<5",
+    "matplotlib>=3.9,<4",
+    "numpy>=2.0,<3",
+    "pandas>=2.2,<3",
+    "pyyaml>=6.0,<7",
+    "scipy>=1.14,<2",
+    "statsmodels>=0.14,<1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3,<9",
+    "ruff>=0.6,<1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
